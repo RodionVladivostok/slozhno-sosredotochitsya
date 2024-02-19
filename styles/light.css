@@ -10,3 +10,146 @@
     чем стили в медиазапросе предпочтений пользователя
   */
 }
+
+:root .theme_light {
+  --main-font: "IBM Plex mono", sans-serif;
+  --font-size: 18px;
+  --bg-color: #fff1f7;
+  --accent-color: #ff8dcb;
+  --button-corners-color: #353430;
+  --button-corners-color-hover: rgba(50, 49, 45, 0.4);
+  --main-title-color: #ffc2e6;
+  --text-color: #353430;
+  --title-text-color: #353430;
+  --text-weight: 400;
+  --title-text-weight: 700;
+  --line-height: 23.4px;
+  --line-height-decor-text: 25px;
+  --line-height-button-text: 18px;
+  --line-height-main-title: 95.7px;
+}
+
+/* Остальные стили */
+
+.theme_light .header {
+  background-image: url(../images/cover-image-light.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+.decorated-zone::before {
+  border-color: var(--accent-color);
+}
+
+.decorated-zone::after {
+  border-color: var(--accent-color);
+}
+
+.header__theme-menu-button {
+  color: var(--accent-color);
+  border-color: var(--accent-color);
+}
+
+.theme_light .header__decor-text {
+  display: none;
+}
+
+.theme_light .decorated-zone::before {
+  border-color: var(--button-corners-color);
+}
+
+.theme_light .decorated-zone::after {
+  border-color: var(--button-corners-color);
+}
+
+.theme_light .header__theme-menu-button {
+  color: var(--button-corners-color);
+  border-color: var(--button-corners-color);
+}
+
+.theme_light .header__theme-menu-button:hover {
+  border-color: var(--button-corners-color-hover);
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    /* Дублируем переменные светлой темы */
+    --main-font: "IBM Plex mono", sans-serif;
+    --font-size: 18px;
+    --bg-color: #fff1f7;
+    --accent-color: #ff8dcb;
+    --button-corners-color: #353430;
+    --button-corners-color-hover: rgba(50, 49, 45, 0.4);
+    --main-title-color: #ffc2e6;
+    --text-color: #353430;
+    --title-text-color: #353430;
+    --text-weight: 400;
+    --title-text-weight: 700;
+    --line-height: 23.4px;
+    --line-height-decor-text: 25px;
+    --line-height-button-text: 18px;
+    --line-height-main-title: 95.7px;
+  }
+
+  .theme_light .header__decor-text {
+    display: none;
+  }
+
+  .theme_auto .header__decor-text {
+    display: none;
+  }
+
+  .theme_light .decorated-zone::before {
+    border-color: var(--button-corners-color);
+  }
+
+  .theme_light .decorated-zone::after {
+    border-color: var(--button-corners-color);
+  }
+
+  .theme_light .header__theme-menu-button {
+    color: var(--button-corners-color);
+    border-color: var(--button-corners-color);
+  }
+
+  .theme_light .header__theme-menu-button:hover {
+    border-color: var(--button-corners-color-hover);
+  }
+
+  .theme_auto .decorated-zone::before {
+    border-color: var(--button-corners-color);
+  }
+
+  .theme_auto .decorated-zone::after {
+    border-color: var(--button-corners-color);
+  }
+
+  .theme_auto .header__theme-menu-button {
+    color: var(--button-corners-color);
+    border-color: var(--button-corners-color);
+  }
+
+  .theme_auto .header__theme-menu-button:hover {
+    border-color: var(--button-corners-color-hover);
+  }
+
+  .theme_auto .header {
+    background-image: url(../images/cover-image-light.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+  }
+
+  .theme_light .header {
+    background-image: url(../images/cover-image-light.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+  }
+}
+
+/* Остальные стили */
