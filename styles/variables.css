@@ -3,9 +3,9 @@
   и их переопределение под различные устройства
 */
 :root {
-  --main-font: "IBM Plex mono", sans-serif;
+  --main-font: "IBM Plex mono", monospace;
   --font-size: 18px;
-  --bg-color: #000028;
+  --bg-image: url(../images/cover-image-dark.png);
   --accent-color: #ff0070;
   --button-corners-color: #ff0070;
   --button-corners-color-hover: rgba(255, 0, 112, 0.4);

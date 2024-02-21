@@ -9,12 +9,17 @@
     Так стили написанные ниже будут иметь больший вес,
     чем стили в медиазапросе предпочтений пользователя
   */
+  background-image: var(--bg-image);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
 }
 
 :root .theme_light {
-  --main-font: "IBM Plex mono", sans-serif;
+  --main-font: "IBM Plex mono", monospace;
   --font-size: 18px;
-  --bg-color: #fff1f7;
+  --bg-image: url(../images/cover-image-light.png);
   --accent-color: #ff8dcb;
   --button-corners-color: #353430;
   --button-corners-color-hover: rgba(50, 49, 45, 0.4);
@@ -30,14 +35,6 @@
 }
 
 /* Остальные стили */
-
-.theme_light .header {
-  background-image: url(../images/cover-image-light.png);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-attachment: fixed;
-}
 
 .decorated-zone::before {
   border-color: var(--accent-color);
@@ -73,12 +70,16 @@
   border-color: var(--button-corners-color-hover);
 }
 
+.theme_light .content-section__title {
+  color: var(--title-text-color);
+}
+
 @media (prefers-color-scheme: light) {
   :root {
     /* Дублируем переменные светлой темы */
-    --main-font: "IBM Plex mono", sans-serif;
+    --main-font: "IBM Plex mono", monospace;
     --font-size: 18px;
-    --bg-color: #fff1f7;
+    --bg-image: url(../images/cover-image-light.png);
     --accent-color: #ff8dcb;
     --button-corners-color: #353430;
     --button-corners-color-hover: rgba(50, 49, 45, 0.4);
@@ -91,6 +92,14 @@
     --line-height-decor-text: 25px;
     --line-height-button-text: 18px;
     --line-height-main-title: 95.7px;
+  }
+
+  .page.theme_auto {
+    background-image: var(--bg-image);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
   }
 
   .theme_light .header__decor-text {
@@ -135,20 +144,8 @@
     border-color: var(--button-corners-color-hover);
   }
 
-  .theme_auto .header {
-    background-image: url(../images/cover-image-light.png);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-attachment: fixed;
-  }
-
-  .theme_light .header {
-    background-image: url(../images/cover-image-light.png);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-attachment: fixed;
+  .theme_auto .content-section__title {
+    color: var(--title-text-color);
   }
 }
 
